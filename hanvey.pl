@@ -571,6 +571,16 @@ sub mods {
 	   hallr=>	'<mods:name type="personal"><mods:namePart type="family">Hall</mods:namePart><mods:namePart type="given">Roy</mods:namePart><mods:displayForm>Hall, Roy</mods:displayForm></mods:name>',
 	   fay=>	'<mods:name type="personal"><mods:namePart type="family">Fay</mods:namePart><mods:namePart type="given">Cell</mods:namePart><mods:displayForm>Fay, Cell</mods:displayForm></mods:name>',
 	   gough=>	'<mods:name type="personal"><mods:namePart type="family">Gough</mods:namePart><mods:namePart type="given">Jim</mods:namePart><mods:displayForm>Gough, Jim</mods:displayForm></mods:name>',
+	   friel=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Friel</mods:namePart><mods:namePart type="given">Brian</mods:namePart><mods:displayForm>Friel, Brian</mods:displayForm></mods:name>',
+	   friela=>	'<mods:name type="personal"><mods:namePart type="family">Friel</mods:namePart><mods:namePart type="given">Anne</mods:namePart><mods:displayForm>Friel, Anne</mods:displayForm></mods:name>',
+	   roche=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Roche</mods:namePart><mods:namePart type="given">Anthony</mods:namePart><mods:displayForm>Roche, Anthony</mods:displayForm></mods:name>',
+	   ferriter=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Ferriter</mods:namePart><mods:namePart type="given">Diarmaid</mods:namePart><mods:namePart type="date">1972-</mods:namePart><mods:displayForm>Ferriter, Diarmaid, 1972-</mods:displayForm></mods:name>',
+	   fiach=>	'<mods:name type="personal"><mods:namePart type="family">Mac Conghail</mods:namePart><mods:namePart type="given">Fiach</mods:namePart><mods:displayForm>Mac Conghail, Fiach</mods:displayForm></mods:name>',
+	   reganm=>	'<mods:name type="personal"><mods:namePart type="family">Regan</mods:namePart><mods:namePart type="given">Maurice</mods:namePart><mods:displayForm>Regan, Maurice</mods:displayForm></mods:name>',
+	   priorp=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Prior</mods:namePart><mods:namePart type="given">Pauline</mods:namePart><mods:displayForm>Prior, Pauline</mods:displayForm></mods:name>',
+	   mansergh=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Mansergh</mods:namePart><mods:namePart type="given">Martin</mods:namePart><mods:displayForm>Mansergh, Martin</mods:displayForm></mods:name>',
+	   mcclean=>	'<mods:name type="personal"><mods:namePart type="family">Mc Clean</mods:namePart><mods:namePart type="given">Paddy Joe</mods:namePart><mods:displayForm>Mc Clean, Paddy Joe</mods:displayForm></mods:name>',
+	   brysona=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Bryson</mods:namePart><mods:namePart type="given">Anna</mods:namePart><mods:namePart type="date">1976-</mods:namePart><mods:displayForm>Bryson, Anna, 1976-</mods:displayForm></mods:name>',
 	
 	
 	
