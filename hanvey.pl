@@ -38,7 +38,7 @@ my $Book = $Excel->Workbooks->Open($excelfile);
 my $Sheet = $Book->Worksheets("Sheet1");
 $Sheet->Activate();  
 
-
+print "Hi! \n";
 
 main();
 
@@ -602,11 +602,14 @@ sub mods {
 			    10 => 'Seamus Heaney',
 			    11 => '&#201;amon De Valera',
 			    12 => 'Gusty Spence',
-                13 => 'RUC/PSNI',			  
+                13 => 'RUC/PSNI',
+			15 => 'Brian Friel',			  
 	);
 	my %subseries_names = (
-			  '1A' => 'Original Accession 2001, 1970s-2007', 	
+			  '1A' => 'Original Accession 2001, 1970s-2007',
+			  '1E' => 'Accretions 2011, 1970s-2011', 	
 			  '2A' => 'Original Accession 2001, 1970s-1999',
+			  '2E' => 'Accretions 2011, 1980s-2011',
 			  '2F' => 'Accretions 2012, 50th International Eucharistic Congress (June 17, 2012)',
 			  '3A' => 'Original Accession 2001, 1970s-1990s', 
 		        '4A' => 'Original Accession 2001, 1970s-1990s',
@@ -622,6 +625,7 @@ sub mods {
 			 '11A' => 'Original Accession 2002, 1970s',
 			 '12A' => 'Original Accession 2002, 1985-1995',
 			 '13A' => 'Original Accession 2008, October 2001-March 2002',
+			 '15A' => 'Original Accession 2011, 1996-2011',
 	);
 	$fh->print("<mets:dmdSec ID=\"DMD1\">\n");
 	$fh->print("\t\t<mets:mdWrap MDTYPE=\"MODS\">\n");
@@ -884,7 +888,7 @@ if ($process ne "digital images"){
 
 
 
-	if (($part eq '4' || $part eq '10' || $part eq '2' || $part eq '6' || $part eq '1' || $part eq '5' || $part eq '8' || $part eq '9' || $part eq '13' || $part eq '12' || $part eq '11') && $names) {
+	if (($part eq '4' || $part eq '10' || $part eq '2' || $part eq '6' || $part eq '1' || $part eq '5' || $part eq '8' || $part eq '9' || $part eq '13' || $part eq '12' || $part eq '11' || $part eq '15' ) && $names) {
 ###names
 		
 		my @names = split(/\s*,\s*/, $names);
@@ -898,7 +902,7 @@ if ($process ne "digital images"){
 		}
 	}
 	#print "i'm at subject\n";
-	if (($part eq '4' || $part eq '10' || $part eq '5') && $topical) {
+	if (($part eq '4' || $part eq '10' || $part eq '5' || $part eq '15') && $topical) {
 ###topical	
 		# "topical is $topical\n";
 		my @topical = split(/\s*,\s*/, $topical);
@@ -1003,10 +1007,10 @@ if ($part eq '11') {
 }
 
 	if ($part eq '2') {
-	#	$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:geographic>Northern Ireland</mods:geographic><mods:topic>Religious life and customs</mods:topic><mods:genre>Photographs</mods:genre></mods:subject>\n");
-	#	$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:topic>Photojournalism</mods:topic><mods:geographic>Northern Ireland</mods:geographic></mods:subject>\n");
+		$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:geographic>Northern Ireland</mods:geographic><mods:topic>Religious life and customs</mods:topic><mods:genre>Photographs</mods:genre></mods:subject>\n");
+		$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:topic>Photojournalism</mods:topic><mods:geographic>Northern Ireland</mods:geographic></mods:subject>\n");
     #Only one used for Subseries F  listed below -- comment out above subjects when generating METS for Part 2F###    
-        $fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name authority=\"naf\" type=\"conference\"><mods:namePart>International Eucharistic Congress (50th : 2012 : Dublin, Ireland)</mods:namePart></mods:name><mods:genre>Photographs</mods:genre></mods:subject>\n");
+      #  $fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name authority=\"naf\" type=\"conference\"><mods:namePart>International Eucharistic Congress (50th : 2012 : Dublin, Ireland)</mods:namePart></mods:name><mods:genre>Photographs</mods:genre></mods:subject>\n");
 		}
 	if ($part eq '8') {
 		$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:topic>Paramilitary forces<\/mods:topic><mods:geographic>Northern Ireland</mods:geographic><mods:topic>History<\/mods:topic><mods:temporal>20th century<\/mods:temporal><mods:genre>Photographs<\/mods:genre><\/mods:subject>\n");
@@ -1027,7 +1031,7 @@ if ($part eq '11') {
 		$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:topic>Photojournalism<\/mods:topic><mods:geographic>Northern Ireland<\/mods:geographic><\/mods:subject>\n");
 		}
 
-	if ($part eq '4' || $part eq '10'|| $part eq '5' || $part eq '12') {
+	if ($part eq '4' || $part eq '10'|| $part eq '5' || $part eq '12' || $part eq '15') {
 ###generic
 
 		$fh->print("\t\t\t\t\t<mods:subject authority=\"lcsh\">\n");
