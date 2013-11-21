@@ -20,7 +20,7 @@ $Win32::OLE::Warn = 3; # Die on Errors.
 my $excelfile = shift @ARGV;
 my $dir= getcwd;
 	$dir=~s/\//\\/g;
-	$excelfile=$dir."//".$excelfile;
+	$excelfile=$dir."\\".$excelfile;
 
 my $Excel = Win32::OLE->GetActiveObject('Excel.Application')
         || Win32::OLE->new('Excel.Application', 'Quit');
@@ -582,7 +582,18 @@ sub mods {
 	   mcclean=>	'<mods:name type="personal"><mods:namePart type="family">Mc Clean</mods:namePart><mods:namePart type="given">Paddy Joe</mods:namePart><mods:displayForm>Mc Clean, Paddy Joe</mods:displayForm></mods:name>',
 	   brysona=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Bryson</mods:namePart><mods:namePart type="given">Anna</mods:namePart><mods:namePart type="date">1976-</mods:namePart><mods:displayForm>Bryson, Anna, 1976-</mods:displayForm></mods:name>',
 	
-	
+	adams=> '<mods:name type="personal" authority="naf"><mods:namePart type="family">Adams</mods:namePart><mods:namePart type="given">Gerry</mods:namePart><mods:namePart type="date">1948-</mods:namePart><mods:displayForm>Adams, Gerry, 1948-</mods:displayForm></mods:name>',
+	biggsdavison=> '<mods:name type="personal"><mods:namePart type="family">Biggs-Davison</mods:namePart><mods:namePart type="given">John Alec</mods:namePart><mods:namePart type="date">1918-</mods:namePart><mods:displayForm>Biggs-Davison, John Alec, 1918-</mods:displayForm></mods:name>',
+	brookej=> '<mods:name type="personal" authority="naf"><mods:namePart type="family">Brooke</mods:namePart><mods:namePart type="given">Basil</mods:namePart><mods:namePart type="termsOfAddress">Sir</mods:namePart><mods:namePart type="date">1888-1973</mods:namePart><mods:displayForm>Brooke, Basil, Sir, 1888-1973</mods:displayForm></mods:name>',
+	bryans=> '<mods:name type="personal"><mods:namePart type="family">Bryans</mods:namePart><mods:namePart type="given">John</mods:namePart><mods:displayForm>Bryans, John</mods:displayForm></mods:name>',
+	carson=> '<mods:name type="personal" authority="naf"><mods:namePart type="family">Carson</mods:namePart><mods:namePart type="given">John</mods:namePart><mods:namePart type="date">1934-</mods:namePart><mods:displayForm>Carson, John, 1934-</mods:displayForm></mods:name>',
+	currand=> '<mods:name type="personal"><mods:namePart type="family">Curran</mods:namePart><mods:namePart type="given">Dermot</mods:namePart><mods:displayForm>Curran, Dermot</mods:displayForm></mods:name>',
+	fittg=> '<mods:name type="personal" authority="naf"><mods:namePart type="family">Fitt</mods:namePart><mods:namePart type="given">Gerry</mods:namePart><mods:namePart type="date">1926-2005</mods:namePart><mods:displayForm>Fitt, Gerry, 1926-2005</mods:displayForm></mods:name>',
+	macgiolla=> '<mods:name type="personal"><mods:namePart type="family">Mac Giolla</mods:namePart><mods:namePart type="given">Tomas</mods:namePart><mods:displayForm>Mac Giolla, Tomas</mods:displayForm></mods:name>',
+	maguirem=> '<mods:name type="personal" authority="naf"><mods:namePart type="family">Maguire</mods:namePart><mods:namePart type="given">Mairead Corrigan</mods:namePart><mods:displayForm>Maguire, Mairead Corrigan</mods:displayForm></mods:name>',
+	mcgrady=> '<mods:name type="personal"><mods:namePart type="family">McGrady</mods:namePart><mods:namePart type="given">Eddie</mods:namePart><mods:displayForm>McGrady, Eddie</mods:displayForm></mods:name>',
+	paisley=> '<mods:name type="personal" authority="naf"><mods:namePart type="family">Paisley</mods:namePart><mods:namePart type="given">Ian R. K.</mods:namePart><mods:displayForm>Paisley, Ian R. K.</mods:displayForm></mods:name>',
+	smythh=> '<mods:name type="personal"><mods:namePart type="family">Smyth</mods:namePart><mods:namePart type="given">Hugh</mods:namePart><mods:displayForm>Smyth, Hugh</mods:displayForm></mods:name>'
 	
 		);
 
@@ -591,6 +602,7 @@ sub mods {
 
 	my %part_names = (
 		        1 => 'Politicians and Political Activities',
+			'1 Additional 2003' => 'Politicians and Political Activities',
 		        2 => 'Religious Leaders and Activities',
 		        3 => 'Bombs and Violence',
 		        4 => 'Writers, Poets, Journalists and Artists',
@@ -607,6 +619,7 @@ sub mods {
 	);
 	my %subseries_names = (
 			  '1A' => 'Original Accession 2001, 1970s-2007',
+			 '1 Additional 2003B' => 'Accretions 2003, 1970s-1980s',
 			  '1E' => 'Accretions 2011, 1970s-2011', 	
 			  '2A' => 'Original Accession 2001, 1970s-1999',
 			  '2E' => 'Accretions 2011, 1980s-2011',
@@ -888,7 +901,7 @@ if ($process ne "digital images"){
 
 
 
-	if (($part eq '4' || $part eq '10' || $part eq '2' || $part eq '6' || $part eq '1' || $part eq '5' || $part eq '8' || $part eq '9' || $part eq '13' || $part eq '12' || $part eq '11' || $part eq '15' ) && $names) {
+	if (($part eq '1 Additional 2003' || $part eq '4' || $part eq '10' || $part eq '2' || $part eq '6' || $part eq '1' || $part eq '5' || $part eq '8' || $part eq '9' || $part eq '13' || $part eq '12' || $part eq '11' || $part eq '15' ) && $names) {
 ###names
 		
 		my @names = split(/\s*,\s*/, $names);
@@ -995,7 +1008,7 @@ if ($process ne "digital images"){
 	if ($title =~ m/Cumann na mBan/) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Cumann na mBan<\/mods:namePart><mods:displayForm>Cumann na mBan<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
 
 
-	if ($part eq '1') {
+	if ($part eq '1' || $part eq '1 Additional 2003') {
 		$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:geographic>Northern Ireland</mods:geographic><mods:topic>Politics and government</mods:topic><mods:genre>Photographs</mods:genre></mods:subject>\n");
 		$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:topic>Politicians<\/mods:topic>  <mods:geographic>Northern Ireland<\/mods:geographic><mods:genre>Photographs<\/mods:genre><\/mods:subject>\n");
 
