@@ -602,8 +602,7 @@ sub mods {
 
 	my %part_names = (
 		        1 => 'Politicians and Political Activities',
-			'1 Additional 2003' => 'Politicians and Political Activities',
-		        2 => 'Religious Leaders and Activities',
+			  2 => 'Religious Leaders and Activities',
 		        3 => 'Bombs and Violence',
 		        4 => 'Writers, Poets, Journalists and Artists',
 			    5 => 'Singers and Other Entertainers', 
@@ -619,7 +618,7 @@ sub mods {
 	);
 	my %subseries_names = (
 			  '1A' => 'Original Accession 2001, 1970s-2007',
-			 '1 Additional 2003B' => 'Accretions 2003, 1970s-1980s',
+			  '1B' => 'Accretions 2003, 1970s-1980s',
 			  '1E' => 'Accretions 2011, 1970s-2011', 	
 			  '2A' => 'Original Accession 2001, 1970s-1999',
 			  '2E' => 'Accretions 2011, 1980s-2011',
