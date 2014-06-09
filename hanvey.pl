@@ -573,6 +573,12 @@ sub mods {
 	   mansergh=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Mansergh</mods:namePart><mods:namePart type="given">Martin</mods:namePart><mods:displayForm>Mansergh, Martin</mods:displayForm></mods:name>',
 	   mcclean=>	'<mods:name type="personal"><mods:namePart type="family">Mc Clean</mods:namePart><mods:namePart type="given">Paddy Joe</mods:namePart><mods:displayForm>Mc Clean, Paddy Joe</mods:displayForm></mods:name>',
 	   brysona=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Bryson</mods:namePart><mods:namePart type="given">Anna</mods:namePart><mods:namePart type="date">1976-</mods:namePart><mods:displayForm>Bryson, Anna, 1976-</mods:displayForm></mods:name>',
+		kinahan=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Kinahan</mods:namePart><mods:namePart type="given">Coralie</mods:namePart><mods:namePart type="date">1924-</mods:namePart><mods:displayForm>Kinahan, Coralie, 1924-</mods:displayForm></mods:name>',
+		harland=>	'<mods:name type="personal"><mods:namePart type="family">Harland</mods:namePart><mods:namePart type="given">Robin</mods:namePart><mods:displayForm>Harland, Robin</mods:displayForm></mods:name>',
+		baing=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Bain</mods:namePart><mods:namePart type="given">George</mods:namePart><mods:namePart type="given">Sayers</mods:namePart><mods:displayForm>Bain, George (Sayers)</mods:displayForm></mods:name>',
+		stacey=>	'<mods:name type="personal"><mods:namePart type="family">Stacey</mods:namePart><mods:namePart type="given">Lawrence</mods:namePart><mods:displayForm>Stacey, Lawrence</mods:displayForm></mods:name>',
+
+
 	);
 
 
@@ -608,6 +614,7 @@ sub mods {
 				'5A' => 'Original Accession 2001, 1970s-1990s',
 				'6A' => 'Original Accession 2001, early 1970s-1998',	
 				'6B' => 'Accretions 2003, 1970s-1990s',
+				'6C' => 'Accretions 2008, 1980s-2005',
 				'7A' => 'Original Accession, 1970s-1990s',
 				'8A' => 'Original Accession 2001, 1970s-2001',
 				'9A' => 'Original Accession, 1970s-1990s',
