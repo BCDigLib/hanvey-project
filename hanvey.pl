@@ -860,14 +860,22 @@ if ($process ne "digital images"){
 			if ($count == 1) {
 			$aat_term =~ s/s$//;
 			}
-			if ($genre eq "digital images") {
-			$fh->print("\t\t\t\t\t\t<mods:extent>$count $aat_term<\/mods:extent>\n");}
-			else {
-			$fh->print("\t\t\t\t\t\t<mods:extent>$count $aat_term (" . $Sheet->Range("F" . $i)->{Value} .")<\/mods:extent>\n");}
+			if ($genre eq "digital images") 
+				{
+					$fh->print("\t\t\t\t\t\t<mods:extent>$count $aat_term<\/mods:extent>\n");
+					$fh->print("\t\t\t\t\t\t<mods:digitalOrigin>born digital<\/mods:digitalOrigin>\n");
+				}
+			else 
+				{
+					$fh->print("\t\t\t\t\t\t<mods:extent>$count $aat_term (" . $Sheet->Range("F" . $i)->{Value} .")<\/mods:extent>\n");
+					$fh->print("\t\t\t\t\t\t<mods:digitalOrigin>reformatted digital<\/mods:digitalOrigin>\n");
+				}
 			$count=0;
 		}
 		$i++;
 	};
+	
+	
 
 	$fh->print("\t\t\t\t\t<\/mods:physicalDescription>\n\n");
 	
