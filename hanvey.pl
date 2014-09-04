@@ -969,7 +969,7 @@ if ($process ne "digital images"){
 
 	if ($title =~ m/DUP/) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Democratic Unionist Party (Northern Ireland)<\/mods:namePart><mods:displayForm>Democratic Unionist Party (Northern Ireland)<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
 
-#	if ($title =~ m/GAA|G\.A\.A\./) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Gaelic Athletic Association<\/mods:namePart><mods:displayForm>Gaelic Athletic Association<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
+	if ($title =~ m/GAA|G\.A\.A\./) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Gaelic Athletic Association<\/mods:namePart><mods:displayForm>Gaelic Athletic Association<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
 #comment out the above IF generating METS for Part 2F
 	if ($title =~ m/INLA/) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Irish National Liberation Army<\/mods:namePart><mods:displayForm>Irish National Liberation Army<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
 
