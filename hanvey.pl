@@ -619,6 +619,7 @@ sub mods {
 				'8A' => 'Original Accession 2001, 1970s-2001',
 				'9A' => 'Original Accession, 1970s-1990s',
 				'10A' => 'Original Accession 2001, 1979-1999',
+				'10B' => 'Accretions 2003, 1979',
 				'11A' => 'Original Accession 2002, 1970s',
 				'12A' => 'Original Accession 2002, 1985-1995',
 				'13A' => 'Original Accession 2008, October 2001-March 2002',
