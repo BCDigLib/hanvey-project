@@ -281,7 +281,7 @@ sub mods {
 		taylor=>	'<mods:name type="personal"><mods:namePart type="family">Taylor</mods:namePart><mods:namePart type="given">John</mods:namePart><mods:displayForm>Taylor, John</mods:displayForm></mods:name>',
 		smythh=>	'<mods:name type="personal"><mods:namePart type="family">Smyth</mods:namePart><mods:namePart type="given">Hugh</mods:namePart><mods:displayForm>Smyth, Hugh</mods:displayForm></mods:name>',
 		smythe=>	'<mods:name type="personal"><mods:namePart type="family">Smyth</mods:namePart><mods:namePart type="given">Ethel</mods:namePart><mods:displayForm>Smyth, Ethel</mods:displayForm></mods:name>',
-		simpson=>	'<mods:name type="personal"><mods:namePart type="family">Simpson</mods:namePart><mods:namePart type="given">Allister</mods:namePart><mods:displayForm>Simpson, Allister</mods:displayForm></mods:name>',
+		simpson=>	'<mods:name type="personal"><mods:namePart type="family">Simpson</mods:namePart><mods:namePart type="given">Alistair</mods:namePart><mods:displayForm>Simpson, Alistair</mods:displayForm></mods:name>',
 		rodgers=>	'<mods:name type="personal"><mods:namePart type="family">Rodgers</mods:namePart><mods:namePart type="given">Jim</mods:namePart><mods:displayForm>Rodgers, Jim</mods:displayForm></mods:name>',
 		robinsonp=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Robinson</mods:namePart><mods:namePart type="given">Peter</mods:namePart><mods:namePart type="given">Peter D.</mods:namePart><mods:displayForm>Robinson, Peter (Peter D.)</mods:displayForm></mods:name>',
 		robinsonh=>	'<mods:name type="personal"><mods:namePart type="family">Robinson</mods:namePart><mods:namePart type="given">Henry</mods:namePart><mods:displayForm>Robinson, Henry</mods:displayForm></mods:name>',
