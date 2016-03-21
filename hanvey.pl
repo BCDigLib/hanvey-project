@@ -577,6 +577,12 @@ sub mods {
 		harland=>	'<mods:name type="personal"><mods:namePart type="family">Harland</mods:namePart><mods:namePart type="given">Robin</mods:namePart><mods:displayForm>Harland, Robin</mods:displayForm></mods:name>',
 		baing=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Bain</mods:namePart><mods:namePart type="given">George</mods:namePart><mods:namePart type="given">Sayers</mods:namePart><mods:displayForm>Bain, George (Sayers)</mods:displayForm></mods:name>',
 		stacey=>	'<mods:name type="personal"><mods:namePart type="family">Stacey</mods:namePart><mods:namePart type="given">Lawrence</mods:namePart><mods:displayForm>Stacey, Lawrence</mods:displayForm></mods:name>',
+		heaneym=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Heaney</mods:namePart><mods:namePart type="given">Marie</mods:namePart><mods:displayForm>Heaney, Marie</mods:displayForm></mods:name>',
+		mclaverty=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">McLaverty</mods:namePart><mods:namePart type="given">Michael</mods:namePart><mods:displayForm>McLaverty, Michael</mods:displayForm></mods:name>',
+		marks=>	'<mods:name type="personal"><mods:namePart type="family">Marks</mods:namePart><mods:namePart type="given">Colm</mods:namePart><mods:displayForm>Marks, Colm</mods:displayForm></mods:name>',
+		ruane=>	'<mods:name type="personal"><mods:namePart type="family">Ruane</mods:namePart><mods:namePart type="given">Catríona</mods:namePart><mods:displayForm>Ruane, Catríona</mods:displayForm></mods:name>',
+		abercorna=>	'<mods:name type="personal"><mods:namePart type="family">Abercorn</mods:namePart><mods:namePart type="given">Alexandra Hamilton</mods:namePart><mods:namePart type="termsOfAddress">Duchess of</mods:namePart><mods:displayForm>Abercorn, Alexandra Hamilton, Duchess of</mods:displayForm></mods:name>',
+
 
 
 	);
