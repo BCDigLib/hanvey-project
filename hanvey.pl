@@ -290,7 +290,7 @@ sub mods {
 		paisley=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Paisley</mods:namePart><mods:namePart type="given">Ian R. K.</mods:namePart><mods:displayForm>Paisley, Ian R. K.</mods:displayForm></mods:name>',
 		oreilly=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">O\'Reilly</mods:namePart><mods:namePart type="given">Tony</mods:namePart><mods:namePart type="date">1936-</mods:namePart><mods:displayForm>O\'Reilly, Tony, 1936-</mods:displayForm></mods:name>',
 		odwyer=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">O\'Dwyer</mods:namePart><mods:namePart type="given">Paul</mods:namePart><mods:namePart type="date">1907-</mods:namePart><mods:displayForm>O\'Dwyer, Paul, 1907-</mods:displayForm></mods:name>',
-		obradaigh=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">O Bradaigh</mods:namePart><mods:namePart type="given">Ruairi</mods:namePart><mods:displayForm>O Bradaigh, Ruairi</mods:displayForm></mods:name>',
+		obradaigh=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">&#xd3; Br&#xe1;daigh</mods:namePart><mods:namePart type="given">Ruair&#xed;</mods:namePart><mods:displayForm>&#xd3; Br&#xe1;daigh, Ruair&#xed;</mods:displayForm></mods:name>',
 		nibreathneach=>	'<mods:name type="personal"><mods:namePart type="family">Ni Breathneach</mods:namePart><mods:namePart type="given">Lucelita</mods:namePart><mods:displayForm>Ni Breathneach, Lucelita</mods:displayForm></mods:name>',
 		nellis=>	'<mods:name type="personal"><mods:namePart type="family">Nellis</mods:namePart><mods:namePart type="given">Mary</mods:namePart><mods:displayForm>Nellis, Mary</mods:displayForm></mods:name>',
 		needham=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Needham</mods:namePart><mods:namePart type="given">Richard</mods:namePart><mods:displayForm>Needham, Richard</mods:displayForm></mods:name>',
@@ -580,7 +580,7 @@ sub mods {
 		heaneym=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">Heaney</mods:namePart><mods:namePart type="given">Marie</mods:namePart><mods:displayForm>Heaney, Marie</mods:displayForm></mods:name>',
 		mclaverty=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">McLaverty</mods:namePart><mods:namePart type="given">Michael</mods:namePart><mods:displayForm>McLaverty, Michael</mods:displayForm></mods:name>',
 		marks=>	'<mods:name type="personal"><mods:namePart type="family">Marks</mods:namePart><mods:namePart type="given">Colm</mods:namePart><mods:displayForm>Marks, Colm</mods:displayForm></mods:name>',
-		ruane=>	'<mods:name type="personal"><mods:namePart type="family">Ruane</mods:namePart><mods:namePart type="given">Catríona</mods:namePart><mods:displayForm>Ruane, Catríona</mods:displayForm></mods:name>',
+		ruane=>	'<mods:name type="personal"><mods:namePart type="family">Ruane</mods:namePart><mods:namePart type="given">Catr&#237;ona</mods:namePart><mods:displayForm>Ruane, Catr&#237;ona</mods:displayForm></mods:name>',
 		abercorna=>	'<mods:name type="personal"><mods:namePart type="family">Abercorn</mods:namePart><mods:namePart type="given">Alexandra Hamilton</mods:namePart><mods:namePart type="termsOfAddress">Duchess of</mods:namePart><mods:displayForm>Abercorn, Alexandra Hamilton, Duchess of</mods:displayForm></mods:name>',
 
 
@@ -609,6 +609,7 @@ sub mods {
 	my %subseries_names = (
 				'1A' => 'Original Accession 2001, 1970s-2007',
 				'1B' => 'Accretions 2003, 1970s-1980s',
+				'1C' => 'Accretions 2008, 1980s-2007',
 				'1E' => 'Accretions 2011, 1970s-2011', 	
 				'2A' => 'Original Accession 2001, 1970s-1999',
 				'2E' => 'Accretions 2011, 1980s-2011',
@@ -900,7 +901,7 @@ if ($process ne "digital images"){
 
 
 
-	if (($part eq '1 Additional 2003' || $part eq '4' || $part eq '10' || $part eq '2' || $part eq '6' || $part eq '1' || $part eq '5' || $part eq '8' || $part eq '9' || $part eq '13' || $part eq '12' || $part eq '11' || $part eq '15' ) && $names) {
+	if (($part eq '1' || $part eq '4' || $part eq '10' || $part eq '2' || $part eq '6' || $part eq '1' || $part eq '5' || $part eq '8' || $part eq '9' || $part eq '13' || $part eq '12' || $part eq '11' || $part eq '15' ) && $names) {
 ###names
 		
 		my @names = split(/\s*,\s*/, $names);
@@ -934,11 +935,15 @@ if ($process ne "digital images"){
 
 ###abbreviations
 
+	if ($title =~ m/\sPSNI/ && $part eq '1') {
+      	$fh->print("<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Police Service of Northern Ireland<\/mods:namePart><mods:displayForm>Police Service of Northern Ireland<\/mods:displayForm><\/mods:name>   <mods:genre>Photographs<\/mods:genre><\/mods:subject>");
+		$fh->print("\n");};
+
 	if ($title =~ m/\sFAIT/) {
 		$fh->print("<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Families Against Intimidation and Terror<\/mods:namePart><mods:displayForm>Families Against Intimidation and Terror<\/mods:displayForm><\/mods:name><mods:genre>Photographs<\/mods:genre><\/mods:subject>");
 		$fh->print("\n");};
 
-	if ($title =~ m/\sPUP\s/) {
+	if ($title =~ m/\sPUP\s/ || $title =~ m/\(PUP\)/) {
 		$fh->print("<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Progressive Unionist Party<\/mods:namePart><mods:displayForm>Progressive Unionist Party<\/mods:displayForm><\/mods:name><mods:genre>Photographs<\/mods:genre><\/mods:subject>");
 		$fh->print("\n");};
 
@@ -954,7 +959,7 @@ if ($process ne "digital images"){
 		$fh->print("<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Ulster Freedom Fighters<\/mods:namePart><mods:displayForm>Ulster Freedom Fighters<\/mods:displayForm><\/mods:name><mods:genre>Photographs<\/mods:genre><\/mods:subject>");
 		$fh->print("\n");};
 
-	if ($title =~ m/\sUUP/) {
+	if ($title =~ m/\sUUP/ || $title =~ m/\(UUP/) {
 		$fh->print("<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Ulster Unionist Party<\/mods:namePart><mods:displayForm>Ulster Unionist Party<\/mods:displayForm><\/mods:name><mods:genre>Photographs<\/mods:genre><\/mods:subject>");
 		$fh->print("\n");};
 
@@ -985,9 +990,9 @@ if ($process ne "digital images"){
 
 	if ($title =~ m/PIRA/) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Provisional IRA<\/mods:namePart><mods:displayForm>Provisional IRA<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
 
-	##if ($title =~ m/RUC/) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Royal Ulster Constabulary<\/mods:namePart><mods:displayForm>Royal Ulster Constabulary<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
+	if ($title =~ m/RUC/) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Royal Ulster Constabulary<\/mods:namePart><mods:displayForm>Royal Ulster Constabulary<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
 
-	if ($title =~ m/Sinn Fein/) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Sinn Fein<\/mods:namePart><mods:displayForm>Sinn Fein<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
+	if ($title =~ m/Sinn Fein/ || $title =~ m/\(SF\)/ ) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Sinn Fein<\/mods:namePart><mods:displayForm>Sinn Fein<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
 
 	if ($title =~ m/SAS/) {$fh->print("\t\t\t\t\t\t<mods:subject authority=\"lcsh\"><mods:name type=\"corporate\" authority=\"naf\"><mods:namePart>Great Britain<\/mods:namePart><mods:namePart>Army<\/mods:namePart><mods:namePart>Special Air Service<\/mods:namePart><mods:displayForm>Great Britain. Army. Special Air Service<\/mods:displayForm><\/mods:name><\/mods:subject>\n")};
 
