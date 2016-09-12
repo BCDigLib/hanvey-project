@@ -168,7 +168,7 @@ sub mods {
 		fm =>  '<mods:subject authority="lcsh"><mods:topic>Folk musicians</mods:topic><mods:genre>Portraits</mods:genre></mods:subject>',
 		clancybrothers => '<mods:subject authority="lcsh"><mods:name type="corporate" authority="naf"><mods:namePart>Clancy Brothers</mods:namePart><mods:displayForm>Clancy Brothers</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 		boysofthelough => '<mods:subject authority="lcsh"><mods:name type="corporate" authority="naf"><mods:namePart>Boys of the Lough</mods:namePart><mods:displayForm>Boys of the Lough</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
-		downtownradio => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Downtown Radio</mods:namePart><mods:displayForm>Downtwon Radio</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
+		downtownradio => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Downtown Radio</mods:namePart><mods:displayForm>Downtown Radio</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 		sandsfamily => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Sands Family (Musical group)</mods:namePart><mods:displayForm>Sands Family (Musical group)</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 		chieftains => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Chieftains</mods:namePart><mods:displayForm>Chieftains</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 
