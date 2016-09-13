@@ -171,6 +171,8 @@ sub mods {
 		downtownradio => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Downtown Radio</mods:namePart><mods:displayForm>Downtown Radio</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 		sandsfamily => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Sands Family (Musical group)</mods:namePart><mods:displayForm>Sands Family (Musical group)</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 		chieftains => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Chieftains</mods:namePart><mods:displayForm>Chieftains</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
+		downpatrick => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Downpatrick Folk Club</mods:namePart><mods:displayForm>Downpatrick Folk Club</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
+		fureys => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Fureys (Musical group)</mods:namePart><mods:displayForm>Fureys (Musical group)</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 
 		);
 		
@@ -619,6 +621,7 @@ sub mods {
 				'4B' => 'Accretions 2003, 1970s-1990s',
 				'4C' => 'Accretions 2008, 1998-2007',
 				'5A' => 'Original Accession 2001, 1970s-1990s',
+				'5C' => 'Accretions 2008, 1970s-2007',
 				'6A' => 'Original Accession 2001, early 1970s-1998',	
 				'6B' => 'Accretions 2003, 1970s-1990s',
 				'6C' => 'Accretions 2008, 1980s-2005',
