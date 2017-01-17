@@ -173,6 +173,7 @@ sub mods {
 		chieftains => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Chieftains</mods:namePart><mods:displayForm>Chieftains</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 		downpatrick => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Downpatrick Folk Club</mods:namePart><mods:displayForm>Downpatrick Folk Club</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
 		fureys => '<mods:subject authority="lcsh"><mods:name type="corporate"><mods:namePart>Fureys (Musical group)</mods:namePart><mods:displayForm>Fureys (Musical group)</mods:displayForm></mods:name><mods:genre>Photographs</mods:genre></mods:subject>',
+		murals => '<mods:subject authority="lcsh"><mods:topic>Mural painting and decoration, Irish</mods:topic><mods:geographic>Northern Ireland</mods:geographic><mods:genre>Photographs</mods:genre></mods:subject><mods:subject authority="lcsh"><mods:topic>Street art</mods:topic><mods:geographic>Northern Ireland</mods:geographic><mods:genre>Photographs</mods:genre></mods:subject><mods:subject authority="lcsh"><mods:topic>Politics in art</mods:topic><mods:genre>Photographs</mods:genre></mods:subject>',
 
 		);
 		
@@ -584,6 +585,12 @@ sub mods {
 		marks=>	'<mods:name type="personal"><mods:namePart type="family">Marks</mods:namePart><mods:namePart type="given">Colm</mods:namePart><mods:displayForm>Marks, Colm</mods:displayForm></mods:name>',
 		ruane=>	'<mods:name type="personal"><mods:namePart type="family">Ruane</mods:namePart><mods:namePart type="given">Catr&#237;ona</mods:namePart><mods:displayForm>Ruane, Catr&#237;ona</mods:displayForm></mods:name>',
 		abercorna=>	'<mods:name type="personal"><mods:namePart type="family">Abercorn</mods:namePart><mods:namePart type="given">Alexandra Hamilton</mods:namePart><mods:namePart type="termsOfAddress">Duchess of</mods:namePart><mods:displayForm>Abercorn, Alexandra Hamilton, Duchess of</mods:displayForm></mods:name>',
+		mckearney=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">McKearney</mods:namePart><mods:namePart type="given">Tommy</mods:namePart><mods:displayForm>McKearney, Tommy</mods:displayForm></mods:name>',
+		mccleanpj=>	'<mods:name type="personal" authority="naf"><mods:namePart type="family">McClean</mods:namePart><mods:namePart type="given">P.J.</mods:namePart><mods:displayForm>McClean, P.J.</mods:displayForm></mods:name>',
+		murphym=>	'<mods:name type="personal"><mods:namePart type="family">Murphy</mods:namePart><mods:namePart type="given">Mick</mods:namePart><mods:displayForm>Murphy, Mick</mods:displayForm></mods:name>',
+		keenan=>	'<mods:name type="personal"><mods:namePart type="family">Keenan</mods:namePart><mods:namePart type="given">Eddie</mods:namePart><mods:displayForm>Keenan, Eddie</mods:displayForm></mods:name>',
+		oregan=>	'<mods:name type="personal"><mods:namePart type="family">O\'Regan</mods:namePart><mods:namePart type="given">Paddy</mods:namePart><mods:displayForm>O\'Regan, Paddy</mods:displayForm></mods:name>',
+		pyne=>	'<mods:name type="personal"><mods:namePart type="family">Pyne</mods:namePart><mods:namePart type="given">Freddie</mods:namePart><mods:displayForm>Pyne, Freddie</mods:displayForm></mods:name>',
 
 
 
@@ -617,6 +624,7 @@ sub mods {
 				'2E' => 'Accretions 2011, 1980s-2011',
 				'2F' => 'Accretions 2012, 50th International Eucharistic Congress (June 17, 2012)',
 				'3A' => 'Original Accession 2001, 1970s-1990s', 
+				'3B' => 'Accretions 2008, 1980s-2007',
 				'4A' => 'Original Accession 2001, 1970s-1990s',
 				'4B' => 'Accretions 2003, 1970s-1990s',
 				'4C' => 'Accretions 2008, 1998-2007',
@@ -904,7 +912,7 @@ if ($process ne "digital images"){
 
 
 
-	if (($part eq '1' || $part eq '4' || $part eq '10' || $part eq '2' || $part eq '6' || $part eq '1' || $part eq '5' || $part eq '8' || $part eq '9' || $part eq '13' || $part eq '12' || $part eq '11' || $part eq '15' ) && $names) {
+	if (($part eq '1' || $part eq '3' || $part eq '4' || $part eq '10' || $part eq '2' || $part eq '6' || $part eq '1' || $part eq '5' || $part eq '8' || $part eq '9' || $part eq '13' || $part eq '12' || $part eq '11' || $part eq '15' ) && $names) {
 ###names
 		
 		my @names = split(/\s*,\s*/, $names);
@@ -918,7 +926,7 @@ if ($process ne "digital images"){
 		}
 	}
 	#print "i'm at subject\n";
-	if (($part eq '4' || $part eq '10' || $part eq '5' || $part eq '15') && $topical) {
+	if (($part eq '4' || $part eq '3' || $part eq '10' || $part eq '5' || $part eq '15') && $topical) {
 ###topical	
 		# "topical is $topical\n";
 		my @topical = split(/\s*,\s*/, $topical);
